@@ -11,7 +11,7 @@ setup(
     packages=['odd_utilities'],
     url='https://github.com/Govexec/django-odd-utilities',
     description="Various utilities and widgets used in our other apps.",
-    long_description=open('README.rst').read(),
+    long_description=open('README.md').read(),
     install_requires=[
         "Django >= 1.3",
     ]
