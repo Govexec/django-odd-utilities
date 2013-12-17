@@ -10,7 +10,9 @@
 		// Place icon for each selected value; supports multiple select
 		selectElement.find(":selected").each(function() {
 			var image = $(this).data("related-image");
-			output.push('<img src="' + image + '" alt="">')
+
+            if (typeof image !== undefined)
+			    output.push('<img src="' + image + '" alt="">')
 		});
 		
 		displayElement.html(output.join("\n"));
