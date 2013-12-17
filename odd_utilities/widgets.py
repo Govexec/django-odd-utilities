@@ -41,7 +41,10 @@ class IconSelect(Select):
         # Add related image path to option's data
         related_image = self.related_images.get(option_value, None)
         if not related_image:
-            related_image = self.related_images.get("-1", None)
+            if option_value == "":
+                related_image = self.related_images.get("empty", None)
+            else:
+                related_image = self.related_images.get("default", None)
 
         if related_image:
             related_image_html = ' data-related-image="%s"' % related_image
