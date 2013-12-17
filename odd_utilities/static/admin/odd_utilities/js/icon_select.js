@@ -11,7 +11,7 @@
 		selectElement.find(":selected").each(function() {
 			var image = $(this).data("related-image");
 
-            if (typeof image !== undefined)
+            if (typeof image !== "undefined")
 			    output.push('<img src="' + image + '" alt="">')
 		});
 		
